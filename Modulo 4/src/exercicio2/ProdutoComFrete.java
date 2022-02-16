@@ -28,6 +28,6 @@ public class ProdutoComFrete {
 			System.out.println("Valor do Produto: " + valorFinal + "\nFrete: "  + valorDoFrete);
 		}
 		
-		
+		sc.close();
 	}
 }
