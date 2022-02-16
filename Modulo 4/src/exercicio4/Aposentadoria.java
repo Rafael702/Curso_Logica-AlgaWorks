@@ -4,24 +4,32 @@ import java.util.Scanner;
 
 public class Aposentadoria {
 	
+	static final Integer IDADE_MINIMA_PARA_APOSENTAR = 55;
+	
+	static final Integer TEMPO_MINIMO_DE_CONTRIBUICAO = 25;
+	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner (System.in);
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Idade: ");
+		Integer idade = scanner.nextInt();
 		
+		System.out.print("Tempo de contribuição: ");
+		Integer contribuicao = scanner.nextInt();
 		
-		System.out.println("Informe A Sua Idade:");
-		Integer idade = sc.nextInt();
+		Boolean temIdadeParaAposentar = idade >= IDADE_MINIMA_PARA_APOSENTAR;
 		
-		System.out.println("Informe O tempo que você contribuiu com a previdência:");
-		Integer contribuicao = sc.nextInt();
+		Boolean temTempoDeContribuicaoSuficiente = contribuicao >= TEMPO_MINIMO_DE_CONTRIBUICAO;
 		
-		Boolean podeAposentar = idade >= 55 && contribuicao >= 25;
+		Boolean podeAposentar = temIdadeParaAposentar && temTempoDeContribuicaoSuficiente;
 		
-		if(podeAposentar) {
-			System.out.println("O Sr(a) Pode Aposentar!!!!");
+		if (podeAposentar) {
+			System.out.println("Sim! Pode aposentar.");
 		} else {
-			System.out.println("O Sr(a) Não Pode Aposentar, pois é necessário ter 55 anos de idade e 25 anos de contribuição "
-					+ "com a previdência");
+			System.out.println("Não vai ser possível aposentar agora.");
 		}
+		
+		scanner.close();
 	}
 
 }
