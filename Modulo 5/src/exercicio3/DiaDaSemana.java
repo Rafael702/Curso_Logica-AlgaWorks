@@ -9,32 +9,37 @@ public class DiaDaSemana {
 		System.out.println("Digite um número de 1 à 7 para aparecer o dia da Semana escolhido:");
 		Integer diaDaSemana = sc.nextInt();
 		
+		
+		String dia = "";
+		
 		switch(diaDaSemana) {
 		case 1:
-			System.out.println("DOMINGO");
+			dia = "DOMINGO";
 			break;
 		case 2: 
-			System.out.println("SEGUNDA-FEIRA");
+			dia = "SEGUNDA-FEIRA";
 			break;
 		case 3: 
-			System.out.println("TERÇA-FEIRA");
+			dia = "TERÇA-FEIRA";
 			break;
 		case 4:
-			System.out.println("QUARTA-FEIRA");
+			dia = "QUARTA-FEIRA";
 			break;
 		case 5:
-			System.out.println("QUINTA-FEIRA");
+			dia = "QUINTA-FEIRA";
 			break;
 		case 6:
-			System.out.println("SEXTA-FEIRA");
+			dia = "SEXTA-FEIRA";
 			break;
 		case 7:
-			System.out.println("SÁBADO");
+			dia = "SÁBADO";
 			break;
 			default:
 				System.err.println("Digite um número de 1 à 7");
 				System.exit(1);
 		}
+		
+		System.out.println("O dia Da Semana Escolhido Foi: " + dia);
 		
 		sc.close();
 		
