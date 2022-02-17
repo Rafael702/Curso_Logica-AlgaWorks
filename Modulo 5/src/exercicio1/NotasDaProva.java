@@ -34,6 +34,8 @@ public class NotasDaProva {
 			System.out.println("NOTAS: " + "\nPortuguês: " + notaPortugues + "\nMatemática: " + notaMatematica);
 		}
 		
+		sc.close();	
+		
 	}
 
 }
