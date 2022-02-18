@@ -3,7 +3,6 @@ package exercicio1;
 import java.util.Scanner;
 
 public class Tarefas {
-	final static Integer LIMITE = 5;
 
 	public static void main(String[] args) {
 
@@ -13,7 +12,7 @@ public class Tarefas {
 		
 		String novaTarefa;
 		
-		for(int tarefa = 0; tarefa < LIMITE; tarefa++) {
+		for(int tarefa = 0; tarefa < tarefas.length; tarefa++) {
 			for(int contador = tarefa + 1; contador <= tarefa+1; contador++) {
 				System.out.println("Informe a " + (tarefa + 1) + "° tarefa mais importante do seu dia: " );
 				novaTarefa = sc.nextLine();								
@@ -22,7 +21,7 @@ public class Tarefas {
 		}
 		
 		System.out.println("Tarefas Cadastradas: ");
-		for(int exibicaoDaTarefa = 0; exibicaoDaTarefa < LIMITE; exibicaoDaTarefa++) {
+		for(int exibicaoDaTarefa = 0; exibicaoDaTarefa < tarefas.length; exibicaoDaTarefa++) {
 			System.out.println(tarefas[exibicaoDaTarefa]);
 		}
 		
