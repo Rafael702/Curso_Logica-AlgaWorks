@@ -57,12 +57,16 @@ public class PrimeiroMetodo {
 	}
 	
 	static void imprimirVetores(String[] vetor) {
-
-		for(int i = 0; i < vetor.length; i++) {
-			System.out.println("[" + i + "] " + vetor[i]);
+			incrementarVetor(vetor, 0);
+	}
+	
+	static void incrementarVetor(String[] vetor, Integer i) {
+		System.out.println("[" + i + "] " + vetor[i]);
+		
+		if(++i < vetor.length) {
+			incrementarVetor(vetor, i);
 		}
-		
-		
+
 	}
 	
 	static void encerrarProgramaQuandoAPosicaoEstiverInvalida() {
