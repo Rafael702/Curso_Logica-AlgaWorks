@@ -1,5 +1,2 @@
-Acordar
 Dormir
-Acordar
-Ver a Hora
-Voltar a Dormir
+Acordar para Dormir
