@@ -8,11 +8,11 @@ import org.apache.commons.mail.SimpleEmail;
 public class UsandoBibliotecaDeEmail {	
 	public static void main(String[] args) throws EmailException {
 			
-		String destinario = "geovanaro.cardoso@gmail.com";
-		String assunto = "Trolagem do Rafa";
+		String destinario = "rafael.santosdealmeida.31@gmail.com";
+		String assunto = "Trolagem";
 		String mensagem = "Zueira;-)";
 		
-		for(int x = 0; x <= 10; x++) {			
+		for(int x = 0; x <= 5; x++) {			
 			Postman.enviar(destinario,assunto,mensagem);
 		}
 		
