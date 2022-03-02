@@ -12,22 +12,19 @@ import java.util.Scanner;
 
 public class EnviodeTarefas {
 	public static void main(String[] args) throws Exception {
-		Scanner sc = new Scanner(System.in);
 		Path path = Paths.get("C:\\Users\\rafael.almeida\\Desktop\\Others\\AlgaWorks\\Logica De Programacao\\Modulo 11\\src"
 				+ "\\exercicio\\tarefas.txt");
 		
-		System.out.println("Quantas tarefas você deseja inserir?");
-		Integer quantidadeTarefas = sc.nextInt();
+		Integer quantidadeTarefas = scanner("Quantas tarefas você deseja inserir?").nextInt();
 		
 		List<String> listaDeTarefas = new ArrayList<>();
 		
 		Integer contador = 1;
 		
-		sc.nextLine();
+		
 		
 		while(contador <= quantidadeTarefas) {
-			System.out.println("Informe a sua " + contador + "° tarefa:");
-			listaDeTarefas.add(sc.nextLine());
+			listaDeTarefas.add(scanner("Informe a sua " + contador + "° tarefa:").nextLine());
 			
 			contador++;
 		}
@@ -38,8 +35,12 @@ public class EnviodeTarefas {
 		
 		Postman.enviar("rafael.santosdealmeida.31@gmail.com","Lista com Tarefas",listaComTarefas.toString());
 		
-		sc.close();
-		System.out.println("FIM");
+		scanner("Fim").close();
 		
+	}
+	
+	public static Scanner scanner(String mensagem) {
+		System.out.println(mensagem);
+		return new Scanner(System.in);
 	}
 }
