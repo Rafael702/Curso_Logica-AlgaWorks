@@ -1,5 +1,5 @@
 Acordar
-Escovar os dentes
-Ler
-Voltar a dormir
-Fazer nada
+Dormir
+Acordar
+Ver a Hora
+Voltar a Dormir
