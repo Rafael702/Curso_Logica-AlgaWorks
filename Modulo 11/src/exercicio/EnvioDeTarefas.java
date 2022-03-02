@@ -10,26 +10,14 @@ import java.util.Scanner;
 
 
 
-public class EnviodeTarefas {
+public class EnvioDeTarefas {
 	public static void main(String[] args) throws Exception {
 		Path path = Paths.get("C:\\Users\\rafael.almeida\\Desktop\\Others\\AlgaWorks\\Logica De Programacao\\Modulo 11\\src"
 				+ "\\exercicio\\tarefas.txt");
 		
 		Integer quantidadeTarefas = scanner("Quantas tarefas você deseja inserir?").nextInt();
 		
-		List<String> listaDeTarefas = new ArrayList<>();
-		
-		Integer contador = 1;
-		
-		
-		
-		while(contador <= quantidadeTarefas) {
-			listaDeTarefas.add(scanner("Informe a sua " + contador + "° tarefa:").nextLine());
-			
-			contador++;
-		}
-		
-		Files.write(path,listaDeTarefas);
+		Files.write(path,Tarefas.listaDeTarefas(quantidadeTarefas));
 		
 		List<String> listaComTarefas = Files.readAllLines(path);
 		
@@ -43,4 +31,6 @@ public class EnviodeTarefas {
 		System.out.println(mensagem);
 		return new Scanner(System.in);
 	}
+	
+	
 }
