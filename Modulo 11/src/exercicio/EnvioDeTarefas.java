@@ -19,9 +19,9 @@ public class EnvioDeTarefas {
 		
 		Files.write(path,Tarefas.listaDeTarefas(quantidadeTarefas));
 		
-		List<String> listaComTarefas = Files.readAllLines(path);
+		String tarefas = tarefasDaLista(Files.readAllLines(path));
 		
-		Postman.enviar("rafael.santosdealmeida.31@gmail.com","Lista com Tarefas",listaComTarefas.toString());
+		Postman.enviar(tarefas);
 		
 		scanner("Fim").close();
 		
@@ -32,5 +32,15 @@ public class EnvioDeTarefas {
 		return new Scanner(System.in);
 	}
 	
+	public static String tarefasDaLista(List<String> listaComTarefas) {
+		
+		String tarefa = "";
+
+		for(int i = 0; i < listaComTarefas.size(); i++) {
+			tarefa += (i+1) + "°: " + listaComTarefas.get(i) + "\n";
+		}
+		
+		return tarefa;
+	}
 	
 }
