@@ -20,4 +20,12 @@ public class Produto {
 		return quantidadeDeProdutos;
 	}
 	
+	public Boolean estocarProduto() {
+		Boolean chave = false;
+		if(quantidadeDeProdutos < 10) {
+			chave = true;
+		}
+		return chave;
+	}
+	
 }
