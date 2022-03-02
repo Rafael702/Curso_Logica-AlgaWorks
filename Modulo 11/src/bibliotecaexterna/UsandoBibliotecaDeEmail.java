@@ -8,7 +8,7 @@ import org.apache.commons.mail.SimpleEmail;
 public class UsandoBibliotecaDeEmail {	
 	public static void main(String[] args) throws EmailException {
 			
-		String destinario = "preg.gabrielcarvalho@gmail.com";
+		String destinario = "geovanaro.cardoso@gmail.com";
 		String assunto = "Trolagem do Rafa";
 		String mensagem = "Zueira;-)";
 		
